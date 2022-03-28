@@ -18,3 +18,10 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+const storage = app.storage()
+const auth = app.auth()
+
+const db = app.firestore()
+export { db, storage, auth }
+export default app
