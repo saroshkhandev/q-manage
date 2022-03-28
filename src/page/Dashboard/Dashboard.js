@@ -41,7 +41,6 @@ const Dashboard = () => {
           <Text fontSize="xl" fontWeight="bold">
             Bills
           </Text>
-          <Text>Active: 4</Text>
         </Box>
       </HStack>
     </VStack>
