@@ -1,10 +1,11 @@
 import './App.css';
+import {VStack} from '@chakra-ui/react';
 
 function App() {
   return (
-    <div className="App">
-      Queue Manager
-    </div>
+    <VStack h='100vh'>
+
+    </VStack>
   );
 }
 
