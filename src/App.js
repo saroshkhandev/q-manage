@@ -1,5 +1,5 @@
 import './App.css'
-import { HStack } from '@chakra-ui/react'
+import { HStack, VStack } from '@chakra-ui/react'
 import Sidebar from './components/Sidebar'
 import Dashboard from './page/Dashboard/Dashboard'
 import { Routes, Navigate } from 'react-router-dom'
@@ -9,16 +9,17 @@ import Products from './page/Products/Products'
 
 function App() {
   return (
-    <HStack h="100%" w="100%">
-      <Sidebar />
-      <Routes>
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/users" element={<Users />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/" element={<Navigate replace to="/dashboard" />} />
-      </Routes>
-      <Dashboard />
-    </HStack>
+    <VStack h="100vh" w="100vw" spacing="unset">
+      <HStack h="100%" w="100%">
+        <Sidebar />
+        <Routes>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/" element={<Navigate replace to="/dashboard" />} />
+        </Routes>
+      </HStack>
+    </VStack>
   )
 }
 
