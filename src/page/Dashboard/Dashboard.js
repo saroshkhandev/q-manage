@@ -1,5 +1,6 @@
 import { Box, HStack, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
+import { Link as RouterLink } from 'react-router-dom'
 
 const Dashboard = () => {
   return (
@@ -14,7 +15,7 @@ const Dashboard = () => {
           borderRadius={5}
         >
           <Text fontSize="xl" fontWeight="bold">
-            Users
+            Active Users
           </Text>
           <Text>Active: 4</Text>
         </Box>
@@ -25,9 +26,11 @@ const Dashboard = () => {
           h="100px"
           color="white"
           borderRadius={5}
+          as={RouterLink}
+          to="/users"
         >
           <Text fontSize="xl" fontWeight="bold">
-            Products
+            Customers
           </Text>
         </Box>
         <Box
@@ -37,9 +40,11 @@ const Dashboard = () => {
           h="100px"
           color="white"
           borderRadius={5}
+          as={RouterLink}
+          to="/sales"
         >
           <Text fontSize="xl" fontWeight="bold">
-            Bills
+            Sales
           </Text>
         </Box>
       </HStack>

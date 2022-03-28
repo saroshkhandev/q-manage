@@ -6,6 +6,7 @@ import { Routes, Navigate } from 'react-router-dom'
 import { Route } from 'react-router'
 import Users from './page/Users/Users'
 import Products from './page/Products/Products'
+import Sales from './page/Sales/Sales'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/users" element={<Users />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/sales" element={<Sales />} />
           <Route path="/" element={<Navigate replace to="/dashboard" />} />
         </Routes>
       </HStack>
