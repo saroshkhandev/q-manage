@@ -43,7 +43,7 @@ const Products = () => {
           Add Product
         </Button>
       </Box>
-      <Box>
+      <Box w="full" p="20px" m={2}>
         <Table variant="striped" colorScheme="teal">
           <TableCaption>Products Stock Availability</TableCaption>
           <Thead>
