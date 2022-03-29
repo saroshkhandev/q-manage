@@ -38,35 +38,31 @@ const Products = () => {
   }
   return (
     <VStack h="full" w="full" p={10}>
-      <div>
-        <button onClick={printData}>click</button>
-
-        {/* <h2>{
-        
-         products?.usr.map((index)=>{
-           <li>${index}</li>
-         })
-
-        }</h2> */}
-      </div>
-      <Table variant="striped" colorScheme="teal">
-        <TableCaption>Products Stock Availability</TableCaption>
-        <Thead>
-          <Tr>
-            <Th>Product Name</Th>
-            <Th>Section</Th>
-            <Th isNumeric>Amount</Th>
-          </Tr>
-        </Thead>
-        <Tbody>
-          {products && products.map(product => (
+      <Box w="full" p="20px" m={2} bg="#F7F5F2">
+        <Button bg="#4D96FF" color="white">
+          Add Product
+        </Button>
+      </Box>
+      <Box>
+        <Table variant="striped" colorScheme="teal">
+          <TableCaption>Products Stock Availability</TableCaption>
+          <Thead>
             <Tr>
-              <Td>{product.prod_name}</Td>
-              <Td>Electronics</Td>
-              <Td isNumeric>{product.prod_price}</Td>
+              <Th>Product Name</Th>
+              <Th>Section</Th>
+              <Th isNumeric>Amount</Th>
             </Tr>
-          ))}
-          {/* <Tr>
+          </Thead>
+          <Tbody>
+            {products &&
+              products.map(product => (
+                <Tr>
+                  <Td>{product.prod_name}</Td>
+                  <Td>Electronics</Td>
+                  <Td isNumeric>{product.prod_price}</Td>
+                </Tr>
+              ))}
+            {/* <Tr>
             <Td>Denver</Td>
             <Td>Beauty Products</Td>
             <Td isNumeric>253</Td>
@@ -76,15 +72,16 @@ const Products = () => {
             <Td>Accessories</Td>
             <Td isNumeric>4</Td>
           </Tr> */}
-        </Tbody>
-        <Tfoot>
-          <Tr>
-            <Th>Product Name</Th>
-            <Th>Section</Th>
-            <Th isNumeric>Amount</Th>
-          </Tr>
-        </Tfoot>
-      </Table>
+          </Tbody>
+          <Tfoot>
+            <Tr>
+              <Th>Product Name</Th>
+              <Th>Section</Th>
+              <Th isNumeric>Amount</Th>
+            </Tr>
+          </Tfoot>
+        </Table>
+      </Box>
     </VStack>
   )
 }
