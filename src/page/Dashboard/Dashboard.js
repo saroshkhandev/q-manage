@@ -6,6 +6,7 @@ import { useRef, useEffect, useState } from 'react'
 
 const Dashboard = () => {
   const [products, setProducts] = useState()
+  const [customerLength, setCustomerLength] = useState(0)
   const prodList = []
   let check = useRef(null)
   useEffect(() => {
@@ -13,9 +14,11 @@ const Dashboard = () => {
       const res = await fetch('http://localhost:4000/customers')
       const json = await res?.json()
       setProducts(json.usr)
+      
       console.log(products?.usr)
       console.log(json.usr)
-      
+      console.log(products?.length)
+      setCustomerLength(products?.length)
     }
 
     fetchCustomers()
@@ -54,6 +57,15 @@ const Dashboard = () => {
             <Text fontSize="xl" fontWeight="bold">
               Customers
             </Text>
+            <div>
+            {
+                <div>
+                  
+                  
+                  <h3>{customerLength}</h3>
+                </div>
+              }
+            </div>
           </VStack>
         </Box>
         <Box
