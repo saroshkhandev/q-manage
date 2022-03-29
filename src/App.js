@@ -7,6 +7,7 @@ import { Route } from 'react-router'
 import Users from './page/Users/Users'
 import Products from './page/Products/Products'
 import Sales from './page/Sales/Sales'
+import AddProduct from './page/Products/components/AddProduct'
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/users" element={<Users />} />
-          <Route path="/products" element={<Products />} />
+          <Route path="/products" element={<Products />}>
+            <Route path="add" element={<AddProduct />} />
+          </Route>
           <Route path="/sales" element={<Sales />} />
           <Route path="/" element={<Navigate replace to="/dashboard" />} />
         </Routes>

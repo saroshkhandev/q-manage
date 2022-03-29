@@ -8,9 +8,12 @@ import {
   Td,
   TableCaption,
   VStack,
+  Button,
+  Box,
 } from '@chakra-ui/react'
 import React from 'react'
 import { useRef, useEffect, useState } from 'react'
+import { Link as RouterLink } from 'react-router-dom'
 
 const Products = () => {
   const [products, setProducts] = useState()

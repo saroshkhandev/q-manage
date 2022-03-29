@@ -13,6 +13,7 @@ const Dashboard = () => {
           h="100px"
           color="white"
           borderRadius={5}
+          _hover={{ border: '1px solid black' }}
         >
           <Text fontSize="xl" fontWeight="bold">
             Active Users
@@ -28,6 +29,7 @@ const Dashboard = () => {
           borderRadius={5}
           as={RouterLink}
           to="/users"
+          _hover={{ border: '1px solid black' }}
         >
           <Text fontSize="xl" fontWeight="bold">
             Customers
@@ -42,6 +44,7 @@ const Dashboard = () => {
           borderRadius={5}
           as={RouterLink}
           to="/sales"
+          _hover={{ border: '1px solid black' }}
         >
           <Text fontSize="xl" fontWeight="bold">
             Sales
