@@ -17,9 +17,8 @@ function App() {
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/users" element={<Users />} />
-          <Route path="/products" element={<Products />}>
-            <Route path="add" element={<AddProduct />} />
-          </Route>
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/add" element={<AddProduct />} />
           <Route path="/sales" element={<Sales />} />
           <Route path="/" element={<Navigate replace to="/dashboard" />} />
         </Routes>
