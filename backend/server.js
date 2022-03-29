@@ -37,6 +37,17 @@ app.get("/allprod", async(req,res)=>{
         })
 })
 
+app.get("/customers", async(req,res)=>{
+    let usr=[]
+    const users = await db.collection('users').get()
+    for (const user of users.docs) {
+        usr.push(user.data())
+     }
+    res.status(200).json({
+        success: true,
+        usr
+    })
+})
 //api to create new product 
 app.post("/newprod", async(req,res)=>{
     const {id, name, price} = req.body;

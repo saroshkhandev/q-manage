@@ -3,24 +3,22 @@ import React from 'react'
 import { Link as RouterLink } from 'react-router-dom'
 import { useRef, useEffect, useState } from 'react'
 
-useState
 
 const Dashboard = () => {
   const [products, setProducts] = useState()
   const prodList = []
   let check = useRef(null)
   useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch('http://localhost:4000/allprod')
+    const fetchCustomers = async () => {
+      const res = await fetch('http://localhost:4000/customers')
       const json = await res?.json()
       setProducts(json.usr)
       console.log(products?.usr)
       console.log(json.usr)
-      // console.log(json.usr[0]);
-      check = json.usr
+      
     }
 
-    fetchData()
+    fetchCustomers()
   }, [])
   return (
     <VStack h="full" p={10}>
