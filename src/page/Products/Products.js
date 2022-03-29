@@ -38,7 +38,7 @@ const Products = () => {
   return (
     <VStack h="full" w="full" p={10}>
       <Box w="full" p="20px" m={2} bg="#F7F5F2">
-        <Button bg="#4D96FF" color="white">
+        <Button bg="#4D96FF" color="white" as={RouterLink} to="/products/add">
           Add Product
         </Button>
       </Box>
