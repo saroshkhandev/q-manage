@@ -21,7 +21,8 @@ const AddProduct = () => {
         }}
         validationSchema={Yup.object().shape({
           productName: Yup.string().required('Required'),
-          productPrice: Yup.number().required('Required')
+          productPrice: Yup.number().required('Required'),
+          imageUrl: Yup.string().required('Required')
         })}
       >
         {props => {
@@ -77,6 +78,26 @@ const AddProduct = () => {
                 />
                 {errors.productPrice && touched.productPrice && (
                   <div className="input-feedback">{errors.productPrice}</div>
+                )}
+
+                <FormLabel htmlFor="price" style={{ display: 'block' }}>
+                  Image Url
+                </FormLabel>
+                <Input
+                  id="name"
+                  placeholder="Enter Product Name"
+                  type="text"
+                  value={values.imageUrl}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  className={
+                    errors.imageUrl && touched.imageUrl
+                      ? 'text-input error'
+                      : 'text-input'
+                  }
+                />
+                {errors.imageUrl && touched.imageUrl && (
+                  <div className="input-feedback">{errors.imageUrl}</div>
                 )}
 
                 <HStack gap={2}>
